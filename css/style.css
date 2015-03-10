@@ -1,3 +1,7 @@
+@include 'http://fonts.googleapis.com/css?family=Indie+Flower';
+@include 'http://fonts.googleapis.com/css?family=Roboto+Condensed';
+/*@include 'http://fonts.googleapis.com/css?family=Pacifico';*/
+
 body {
   background-color: #333;
   color: #eee;
@@ -5,7 +9,6 @@ body {
   padding:2em;
   padding-right:20%;
   padding-left:10%;
-
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -18,5 +21,16 @@ p.uthevet {
  background-color:#555;
  padding:0.5em;
 }
+
+/*
+p.uthevet::first-letter {
+  font-size:2.2em;
+  float:left;
+  padding-right:0.1em;
+  top:0;
+  font-family:"pacifico", serif;
+}
+*/
+
  
 
