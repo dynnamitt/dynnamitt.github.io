@@ -1,5 +1,22 @@
 body {
   background-color: #333;
-  color: white;
-  font-family: 'Tangerine', serif;
+  color: #eee;
+  font-family: 'robo condensed', serif;
+  padding:2em;
+  padding-right:20%;
+  padding-left:10%;
+
 }
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Indie flower', serif;
+  color: palegreen;
+}
+
+p.uthevet {
+ font-size:1.2em;
+ background-color:#555;
+ padding:0.5em;
+}
+ 
+
