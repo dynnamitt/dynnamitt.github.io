@@ -18,31 +18,37 @@
 	
 	<!-- ALL SLIDES GO HERE -->
 	<!-- Each section element contains an individual slide -->
-	<section>
+	<section id=start>
 	  <h1>Html5 + Epub3</h1>
 	  <img src="../imgs/epub3html-300.jpg">
 	  <p>
 	    <small>
-	      (... les noter, velkommen, mine meninger er mine meninger, etc)
+	      (..les noter, velkommen, mine meninger er mine meninger,etc)
 	    </small>
 	</section>
 	
-	<section id="bio">
-	  <section>
+	<section >
+	  <section id=bio1>
 	    <h1>@dynnamitt</h1>
 	    <p >
 	      <strong>Kjetil Flovild-(Dynna)Midtlie</strong>
 	    <p>
-	      Jobber hos <a target=_blank href="http://www.docstream.no">Docstream A/S</a> som Seniorutvikler/Arkitekt.
-	      Holder til på Olavsgaard, Skjetten.
-	    <p>
-	      Har jobbet med IKT i flere bransjer/selskaper i over 18 år. 
-	    <p>
-	      80-tallet; Selvlært på BASIC, deretter C.
-	    <p>
-	      Teknisk Fagskole Gjøvik, oppdaget internett og HTML der ca. 1993/94.
+	      <div class=fragment>
+		<p>
+		  Jobber hos <a target=_blank href="http://www.docstream.no">Docstream A/S</a> som Seniorutvikler/Arkitekt.
+		  Holder til på Olavsgaard, Skjetten.
+		  <small>(noter; om Docstream litt ..)</small>
+	      </div>
+	      <div class=fragment>
+		<p>
+		  Har jobbet med IKT i flere bransjer/selskaper i over 18 år. 
+		<p>
+		  80-tallet; Selvlært på BASIC, deretter C.
+		<p>
+		  Teknisk Fagskole Gjøvik, oppdaget internett og HTML der ca. 1993/94.
+	      </div>
 	  </section>
-	  <section>
+	  <section id=bio2>
 	    <p>
 	      Byttet ut <u>SQL</u> med <u><strong>XML</strong></u> ca. periode 2002 - 2004.
 	    <p>
@@ -59,15 +65,15 @@
 	  </section>
 	</section>
 	
-	<section>
-	  <section>
+	<section >
+	  <section id=kickoff>
 	    <p>"Internett har kommet for å bli"</p>
-	    <img  src="../imgs/internet_map.png">
+	    <img  src="../imgs/internet_map.png" width="49%">
 	  </section>
 
-	  <section>
+	  <section id=www3 >
 	    <h2>..og i sær WWW ! </h2>
-	    <img src="../imgs/html5css4js.png">
+	    <img src="../imgs/html5css4js.png" >
 	    <p>
 	      <small>
 		(enormt mange standarder (i w3c),
@@ -78,13 +84,91 @@
 	      </small>
 	  </section>
 	</section>
+
+	<section >
+	  <section id=hypermedia>
+	    <h2>www er hypermedia</h2>
+	    <img src="../imgs/hypermedia1b.png" width="50%">
+	    <ul>
+	      <li>
+		HTML docs + HTTP kommunikasjon
+	      <li>
+		Deling av data via hyperlinks !
+	      <li>
+		Flytene tekst, linjer er ALDRI fast bredde !
+	      <li>
+		Uendelig antall klientet/agenter !
+	    </ul>
+	  </section>
+	  <section>
+	    <h3>Noter:</h3>
+	    <ul>
+	      <li>
+		HTML fila er kjernen som gir oversikt
+	      <li>
+		Tekst formatet er sterkest av dem alle! (UNIX 1970)
+	      <li>
+		..men innimellom kan bilder hjelpe oss.
+	      <li >
+		Ergo; "sier IKKE mer enn tusen ord"
+	    </ul>
+	  </section>
+	</section>
+	<section >
+	  <section id=html5>
+	    <h2>HTML5</h2>
+	    <ul>
+	      <li>
+		10 år siden WHATWG (ikke w3c) sparket igang igjen
+	      <li>
+		XHTML1 gikk skeis for w3c, "den siste XML moikaner?"
+	      <li>
+		XML lever videre såvidt, men markdown vinner terreng.
+	      <li>
+		2 forskjellige utgaver ; XHTML og HTML
+	      <li>
+		HTML5 har blitt STØRRE men også enklere
+	      <li class=fragment>
+		"As simple as possible, as complex as necessary"
+		</ul>
+	  </section>
+	</section>
+
+	<section id=code1>
+	  <h2>Enkelere</h2>
+	  <pre><code>
+	      &lt;!doctype html&gt;
+	      <meta charset=utf-8>
+	      <title>Start fra bunnen! ALLTID!</title>
+	      <h1>Html5</h1>
+	      <p class=uthevet>
+		Dette er avsnitt nr.1. Denne vil bli litt
+		<i>tydligere</i> enn de andre.
+	      </p>
+	      <p>
+		Avsnitt nr. 2 kommer da her, og føyer seg inn i 
+		rekken som er ganske normale.
+	      </p>
+	  </code></pre>
+	</section>
 	
       </div>
     </div>
 
     <script src="../js/reveal/lib/js/head.min.js"></script>
     <script src="../js/reveal/js/reveal.js"></script>
-    <script>Reveal.initialize({});</script>
+    <script>Reveal.initialize({
+      dependencies: [
+      { src: '../js/reveal/plugin/markdown/marked.js', 
+      condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../js/reveal/plugin/markdown/markdown.js', 
+      condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../js/reveal/plugin/highlight/highlight.js', async: true, 
+      callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../js/reveal/plugin/notes/notes.js', async: true }
+      ]
+
+      });</script>
 
   </body>
 </html>
