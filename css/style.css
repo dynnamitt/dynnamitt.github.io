@@ -17,6 +17,14 @@ h1,h2,h3,h4,h5,h6 {
   color: palegreen;
 }
 
+a:link, a:visited {
+  color:cornflowerblue;
+}
+
+a:hover {
+  color:lightblue;
+}
+
 p.uthevet {
  font-size:1.2em;
  background-color:#555;
