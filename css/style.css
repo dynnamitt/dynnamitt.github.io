@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("http://fonts.googleapis.com/css?family=Droid+Sans:700");
 
 body {
   background-color: #333;
@@ -12,7 +13,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'pacifico', serif;
+  font-family: 'droid sans', sans-serif;
   color: palegreen;
 }
 
@@ -20,7 +21,7 @@ p.uthevet {
  font-size:1.2em;
  background-color:#555;
  padding:0.5em;
- margin-right:66%;
+ margin-right:70%;
 }
 
 
