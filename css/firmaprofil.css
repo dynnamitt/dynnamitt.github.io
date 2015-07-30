@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans:700");
+
+body {
+  background-color: #333;
+  color: #eee;
+  font-family: 'roboto condensed', serif;
+  padding:2em;
+  padding-right:20%;
+  padding-left:10%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'droid sans', sans-serif;
+  color: palegreen;
+}
+
+a:link, a:visited {
+  color:cornflowerblue;
+}
+
+a:hover {
+  color:lightblue;
+}
+
+p.uthevet {
+ font-size:1.2em;
+ background-color:#555;
+ padding:0.5em;
+ margin-right:40%;
+}
+
+
+p.uthevet::first-letter {
+  font-size:2.2em;
+  float:left;
+  padding-right:0.3em;
+  padding-bottom:0.3em;
+  line-height:0.2em;
+  font-family:"pacifico", serif;
+}
+
+
+ 
+

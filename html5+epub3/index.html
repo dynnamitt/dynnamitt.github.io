@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">	
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5+EPUB3</title>
+    <link rel="stylesheet" href="../js/reveal/css/reveal.css">
+    <link rel="stylesheet" href="../js/reveal/css/theme/black.css" id="theme">	
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../js/reveal/lib/css/zenburn.css">
+
+  </head>
+  <body>
+    <!-- Wrap the entire slide show in a div using the "reveal" class. -->
+    <div class="reveal">
+      <!-- Wrap all slides in a single "slides" class -->
+      <div class="slides">
+	
+	<!-- ALL SLIDES GO HERE -->
+	<!-- Each section element contains an individual slide -->
+	<section id=start>
+	  <h1>Html5 + Epub3</h1>
+	  <img src="../imgs/epub3html-300.jpg">
+	  
+	</section>
+	
+	<section id=bio1>
+	  <h1>@dynnamitt</h1>
+	  <p>
+	    <strong>Kjetil Flovild-(Dynna)Midtlie</strong>
+	  </p>
+	  
+	  <div class=fragment>
+
+	    <ul>
+	      <li>
+		Jobber hos <a target=_blank href="http://www.docstream.no">Docstream A/S</a> med Bjarte Kvalheim.	  
+	      <li class=fragment>
+		Har jobbet med IKT i flere bransjer/selskaper i over 18 år.
+	      <li class=fragment>
+		Koder og designer nå Shell/CSS/CoffeeScript/Nodejs/Java <br>
+		<small>.. i tillegg til Markup/down</small>
+	       <li class=fragment>
+	       	Utvikler en ny SAAS/tjeneste for tekn.forfattere og forlag.<br>
+	       	Epub/XML basert WYSIWYG editor. Kodenavn : readin.no 
+		<ul>  
+		  
+	  </div>
+	  
+	  <aside class=notes>
+            <p>
+	      Jeg heter Kjetil og jobber i DocStream sammen med Bjarte. 
+	      Blitt bedt (igjen og igjen) om å snakke litt i dag om HTML5.
+	      Laget en slide i HTML5 faktisk....
+	      ?Teksisk krevende materie; pga det abstrakte begrepet
+	      Jeg kommer til å bruke , nemlig "semantikk" .. og ofte .desverre?
+	    <h1>
+	    Sprsmål til dere:Har vi en felles NORSK definisjon på semantikk her i dag?
+	    </h1>
+	    <p>
+	      Vi holder til på Olavsgaard på Skjetten.
+	      Konverterer dokumenter. Skriver kode. Publiserer til web for diverese store selskaper.
+	      I omstilling til Cloud (fra software). Readin.no vil bli beta denne våren. 
+	      
+	      Grunnen til at j er her er at jeg er arkitekten bak denne webapp som bruker epub3.
+	      ...OG (en annen) jeg leser MYE tekniske bøker både på papir og KINDLE 
+	    <p>
+	      Stilling:Seniorutvikler/Arkitekt/Designer (og altmulig-mann).
+	      3 barn , pendler ,bor på Gran Hadeland. Buzy med hus (sic) 
+	    <h3>litt faglig bakgrunn</h3>  
+	    <p>
+	      Selvlært på BASIC, deretter C. (80-tallet)
+	    <p>
+	      Gikk Teknisk Fagskole Gjøvik, oppdaget internett og HTML der ca. 1993/94. (over 20år)
+	    <p>
+	      Byttet ut <u>SQL</u> med <u><strong>XML</strong></u> ca. periode 2002 - 2004. (over 10)
+	    <p>
+	     (( Byttet ut <u>Windows</u> med <u>Linux</u> ca. 2004. (over 10) ))
+	    <p>
+	      Laget min siste Windows desktop app i Des. 2005.
+	    <p>
+	      Altså kun HTML/JS webapps ~ 9 år.
+	    <p>
+	      Om dagen mye Linux Cloud/Drift (aka DevOps) 
+	  </aside>
+	</section>
+
+	<section id=innhold>
+	  <h1>Agenda</h1>
+	  <ol>
+	    <li class=fragment><i>HTML5</i>
+	    <li class=fragment>Demos outline med/uten seksjoner 
+	    <li class=fragment><i>EPUB3</i> = mini-www uten http
+	    <li class=fragment>demos (pandoc+leser)
+	    <li class=fragment>Ennå mer semantikk (inflection)
+	    <li class=fragment>demo WYSIWYG epub web editor
+
+	  </ol>     
+	  <p class=fragment>OK?
+	    <aside class=notes>
+	      <p> 
+		J tenkte å si noe om;
+	      <p>
+		Html5 , nye seksjons-elementer, titler & outline, en h1 fallgruve
+	      <p> 
+		Demo h1-h6 vs Seksjoner, hvordan bygge opp en outline på 2 forskjellige måter
+		Først online via github, deretter i windows:
+		..enkel bruk av Word + et fantastisk DOS verktøy (haskell) som heter pandoc.
+	      <p>
+		Etter det : epub3 , konseptet 
+	      <p>
+		Ny demo runde "Enkeste vei til epub" .( fra word til epub igjen via PANDOC)
+	      <p>
+		Hvordan putte inn ennå mer semantikk i epub3 (kontra html5). Stikkord: "inflection"
+	      <p>
+		Tilslutt en readin demo hvis det er øsnkelig/tid
+	      <p>
+		Sounds good?
+	      <p>
+		Håndsopprekkning: Hvem lager html her?
+		Hvordan; direkte eller indirekte.
+		"Antager de flese bruker Word/etc?"
+	    </aside>
+	</section>
+	
+	<section>
+	<section id=html5>
+	  <h2>HTML5/6/7? </h2>
+	  <p>
+	    <pre><code>
+	      &lt;!doctype html>
+	      <meta charset="utf-8"/>
+	      </code></pre>
+	  <ul>
+	    <li>
+	      10 år siden spec start.
+	    <li class=fragment>
+	      2 forskjellige utgaver ; XHTML og HTML
+	    <li class=fragment>
+	      HTML har blitt mer kompleks.. forsøk 2.
+	    <li class=fragment>
+	      <a target=_blank 
+		 href="http://www.smashingmagazine.com/2013/01/18/the-importance-of-sections/">Seksjoner</a>;
+	      section,article,nav,aside
+	    
+		
+	  </ul>
+	    <aside class=notes>
+	    <p>
+	      ca 10 år siden WHATWG startet på oppgradering av v4 spec.
+              XHTML1 ble ingen suksess så noe måtte gjøres. (epub2 bruker xhtml1)
+	      (Kun en god grunn til XHTML -> lett å parse .)
+	    <p>
+	      En html ekspert sin utfording: en flytende spec og 2 standard organer.
+	      Men slik funkerer jo også demnokratiet. Flere partier!
+	      Tilslutt bestemmer browser-leverandørerene hva som skal impl.
+	      Viktig med Blog lesing.
+	      (SmashingMagazine.com og AlistAPartcom. Lenker bakerst)
+	    <h3>
+	      Jeg kommer til å bruke litt HTML i demo filene. Epub3 er kun XHTML5.</h3>
+	    <p>
+	      ..<p>
+	    <h3>
+	      KOMPLEXITET; Bad news, good news. </h3>
+	    <p>  
+	      Seksjoner ble nødvendig for å skape et bedre platform/verktøy for andre enn web-designerene.
+	      HTML5 er nå ikke lengre kun en web-desingers playground.
+	      
+	      <p>
+	      	Skal bare nevne i forbifarten;
+		 Html5 har kun en kolonne? Som en bok, helt ulikt en avis. 
+		 Ja faktisk, 
+		 Ikke la en webdesigner fortelle deg noe annet.
+	      <p>
+		 Aldri MER la en web-designer endre din struktur med div's/span's 
+	      
+	    <h3>
+	      Semantikk blir altså bedre via seksjoner ,
+	      vi kan nå neste innhold, og fastsette nøyaktig nivå tilhørihet på innhold inne i innhold.
+	      </h3>
+      
+	  </aside>
+
+	  </section>
+	  <section>
+	    <p>
+	      h1-h6 issue nr.1 <p>
+		<img src="../imgs/leftandright1.png">
+		
+		<p>
+		<a taget=_blank href="http://www.smashingmagazine.com/2013/01/18/the-importance-of-sections/">
+		  Løsning</a>
+
+		<aside class=notes>
+		   <p>Et annet scenario er ASIDE/fotnote.. 
+		       hvilket nivå skal fornoten sortere under i 1 kolonne systemet.
+		   	Det er lett å legge den inn i en visuell riktig rekkefølge men semantisk?
+		   </p>	
+		  <p>
+		    Outline funker ok.. men
+		   <p>
+		    Tim Berners-Lee ville opprinnelig kun ha h-tag (ikke h1-h6.)
+		  
+		  <p>
+		    LES  fra artikkel !!!!
+		   <p>
+			div ble missbrukt, er kun et usynlig-elem/design-tricks til for WEB-designere.
+			Skal vise at en div er MEEGET forskjellig fra section. KLOK av skade!
+		</aside>
+          </section>
+	  </section>
+
+
+	<section>
+	  <p>demo outline/seksjoner<p>
+	  <img src="../imgs/demogeek.jpg">  
+	  <p>
+	  	Pandoc på winDOS: <a href="https://gist.github.com/dynnamitt/38ac3aa1dadaf7e868ab">instruksjoner</a>	
+	  
+	  <aside class=notes>
+	    <h2>the ultimate goal: en OUTLINE</h2>
+	    <h2>deretter; tilhørigheten videre....</h2?
+	  </aside>
+	</section>  
+
+	</section>
+	<section id=epub>
+	  <h1>EPUB versjon 3</h1>
+	  <ol>
+	    <li class=fragment>
+	      "final spec" siden oktober 2011
+	    <li class=fragment>
+	      <a target=_blank
+		 href="http://idpf.org/">idpf.org</a> ; Adobe, Barnes & Noble, Google, Kobo/Rakuten, O'Reilly, Samsung, Sony, Apple
+	   
+	   <li class=fragment>
+	   	Hvorfor ebøker?
+	   <li class=fragment>
+	   	Hvorfor EPUB?
+	   <li class=fragment>
+	      Byttet ut XHTML1 med <a target=_blank
+				      href="http://www.idpf.org/epub/30/spec/epub30-contentdocs.html">HTML5</a>
+	   <li class=fragment>
+	      Enklere <a target=_blank
+			 href="http://www.idpf.org/accessibility/guidelines/content/nav/toc.php">TOC</a> format
+	  
+	  </ol>
+	  <aside class=notes>
+	  
+	    <h3>Hvorfor ebøker?</h3>
+	    	Vi trenger IKKE mer scroll!
+	    	  Killer features: tilpasset ALLE skjermer (ikke kun et arkformat som PDF og WORD)
+	     Side-scroll !!! Tommel-saver.
+	     
+	     
+	    <h3>Hvorfor epub3?</h3>
+	    
+	    	Standard,bred støtte i IT bransjen.
+	    	Enkelt for utviklere iom "vi kan HTML5 gaaaanske bra".
+	    	Konkurerende formater ; mobi 
+	    	pdf og word tja men slitsom for skjermer.
+	   
+	    (Bilder og alle deler ihop.)
+	     Pakket/zippet sammen just som docx.
+	   <h3> 
+	    2 styringsdokumenter + innholdet</h3>
+	    Dette erstatter HTTP sin funksjon.. i en offline setting.
+
+	   <h3>
+	   
+	 
+	   
+	  </aside>
+
+	</section>
+
+	<section>
+	  <h2>Demo</h2>
+	  <h3>Word->Pandoc->leser</h3>
+	  <p>
+	  eller last ned epub's her:<a target=_blank href="http://www.gutenberg.org">gutenberg.org</a>
+	  	
+	  </p>
+	</section>  
+	  
+
+	<section>
+	  <h2> ..ennå mer semantikk!</h2>
+	  <p>
+	    Egen semantisk "bokstruktur" <a target=_blank
+					    href="http://www.idpf.org/epub/vocab/structure/" >standard</a>
+	  <p>
+	    Utvidbar 
+	  <p>
+	    <pre><code>
+	      ..
+	      &lt;section 
+	        epub:type="lot loi daisy:bibliography">
+		<h1 
+		   epub:type="halftitle">tittel tekst</h1>
+		...
+	      &lt;/section>
+	      </code></pre>
+	    
+	    <aside class=notes>
+	      <p>
+		SEMANTIKK overkill?
+		Trenger vi ennå mer av dette?
+		Søkemotorer/robot liker slike ting.
+		semantikk. epub:type attrib.
+		<a target=_blank href="http://www.idpf.org/epub/vocab/structure/" >standard vocab</a>
+		Flere finnes <a target=_blank 
+				href="http://www.daisy.org/z3998/2012/vocab/structure/">daisy</a>.
+		Holder ikke den, lag egen slik vi gjør !
+	    </aside>
+
+	    
+	</section>
+	</section>
+
+	<section>
+	  <h1>demotime readin/ED</h1>
+	  <aside class=notes>
+	      <p>
+		kfm@docstream.no/
+		<a href="http://ed-jjf.readin.no">ed/www</a>
+		<a href="http://jjf.readin.no">www.readin.no</a>
+		<a href="http://bitbucket.org">bitbucket.org</a>
+	      </p>
+	</section>
+
+	<section>
+	  <h4>Linker/ressurser</h4>
+	  	<p>
+	             <a href="https://github.com/dynnamitt/dynnamitt.github.io">Source inkl. HTML-slideshow</a>
+		<p>
+	             <a href="../links.html">Noen eksterne lenker</a>
+	</section>
+      </div>
+    </div>
+
+    <script src="../js/reveal/lib/js/head.min.js"></script>
+    <script src="../js/reveal/js/reveal.js"></script>
+    <script>Reveal.initialize({
+      dependencies: [
+      { src: '../js/reveal/plugin/markdown/marked.js', 
+      condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../js/reveal/plugin/markdown/markdown.js', 
+      condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../js/reveal/plugin/highlight/highlight.js', async: true, 
+      callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../js/reveal/plugin/notes/notes.js', async: true }
+      ]
+
+      });</script>
+
+  </body>
+</html>
